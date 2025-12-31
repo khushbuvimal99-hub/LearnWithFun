@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kids Learning Fun</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "lucide": "https://esm.sh/lucide@0.441.0"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <header id="header" class="hidden">
+            <button id="back-btn" class="icon-btn">
+                <i data-lucide="arrow-left"></i>
+            </button>
+            <h1 id="page-title">Learning Fun</h1>
+        </header>
+
+        <main id="content">
+            <!-- Home Screen -->
+            <div id="home-screen" class="view active">
+                <div class="hero-text">
+                    <h1>Magic Learning!</h1>
+                    <p>Select a world to explore</p>
+                </div>
+                <div class="menu-grid">
+                    <button class="menu-card hindi" data-target="hindi">
+                        <span class="big-char">अ</span>
+                        <span class="label">हिन्दी</span>
+                    </button>
+                    <button class="menu-card english" data-target="english">
+                        <span class="big-char">A</span>
+                        <span class="label">English</span>
+                    </button>
+                    <button class="menu-card numbers" data-target="numbers">
+                        <span class="big-char">1</span>
+                        <span class="label">Numbers</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Learning Grid View -->
+            <div id="grid-screen" class="view">
+                <div class="cards-container" id="cards-grid">
+                    <!-- Cards injected here -->
+                </div>
+            </div>
+        </main>
+    </div> 
+    <script type="module" src="main.js"></script>
+</body>
+</html>
